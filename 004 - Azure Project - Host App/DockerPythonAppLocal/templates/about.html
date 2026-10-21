@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}
+About | Adeel Automates
+{% endblock %}
+
+{% block content %}
+
+<section class="about-page">
+
+    <div class="about-portrait">
+        <img
+            src="{{ url_for('storage_asset', blob_name='biopicture.png') }}"
+            alt="Adeel Automates"
+        >
+    </div>
+
+    <div class="about-copy">
+
+        <h1>
+            Walk in a novice.<br>
+            Leave an <span>engineer.</span>
+        </h1>
+
+        <p class="about-intro">
+            Hi, I'm Adeel. A Cloud Engineer specializing in Azure,
+            Infrastructure as Code and automation.
+        </p>
+
+        <p>
+            I created <strong>Adeel Automates</strong> to help IT
+            professionals build practical cloud engineering skills through
+            clear, hands-on tutorials.
+        </p>
+
+        <p>
+            My goal isn't simply to show you which commands to run. I want
+            you to understand <strong>why</strong> something works, how the
+            underlying technologies fit together, and how to approach real
+            engineering problems with confidence.
+        </p>
+
+        <p>
+            Whether you're just getting started or already working in IT,
+            my goal is to bridge the gap between theory and the skills
+            you'll actually use in production environments.
+        </p>
+
+        <p>
+            Every tutorial is completely free. I don't lock content behind
+            memberships, paid courses or expensive bootcamps because I
+            believe high-quality technical education should be accessible
+            to everyone.
+        </p>
+
+        <div class="about-buttons">
+
+            <a
+                class="primary-button"
+                href="https://www.youtube.com/@AdeelAutomates"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fab fa-youtube"></i>
+                Visit the Channel
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

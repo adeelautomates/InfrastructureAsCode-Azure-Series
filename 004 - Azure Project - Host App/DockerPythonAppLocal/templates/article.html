@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ post.title }} | Adeel Automates
+{% endblock %}
+
+{% block content %}
+
+<article class="article-page">
+
+    <a
+        href="{{ url_for('articles') }}"
+        class="article-back"
+    >
+        <i class="fas fa-arrow-left"></i>
+        Back to Articles
+    </a>
+
+    <div class="article-header">
+
+        {% if post.category or post.date %}
+
+            <div class="article-meta">
+
+                {% if post.category %}
+                    <span>{{ post.category }}</span>
+                {% endif %}
+
+                {% if post.category and post.date %}
+                    <span>•</span>
+                {% endif %}
+
+                {% if post.date %}
+                    <span>{{ post.date }}</span>
+                {% endif %}
+
+            </div>
+
+        {% endif %}
+
+        <h1>
+            {{ post.title }}
+        </h1>
+
+    </div>
+
+    <div class="article-content">
+        {{ post.content }}
+    </div>
+
+</article>
+
+{% endblock %}

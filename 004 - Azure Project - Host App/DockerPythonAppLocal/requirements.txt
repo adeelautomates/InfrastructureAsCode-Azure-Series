@@ -1,0 +1,7 @@
+Flask
+gunicorn
+azure-identity
+azure-storage-blob
+Markdown
+python-frontmatter
+pyodbc

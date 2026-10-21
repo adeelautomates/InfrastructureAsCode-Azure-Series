@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {% block title %}Adeel Automates{% endblock %}
+    </title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='style.css') }}"
+    >
+</head>
+
+<body>
+
+<header>
+
+    <div class="brand">
+
+        <a href="/" class="profile-link">
+            <img
+                src="{{ url_for(
+                    'storage_asset',
+                    blob_name='headshot.png'
+                ) }}"
+                alt="Adeel Automates"
+            >
+        </a>
+
+        <div class="brand-right">
+
+            <a href="/" class="logo">
+                Adeel <span>Automates</span>
+            </a>
+
+            <nav class="navigation">
+
+                <a
+                    href="/about"
+                    class="{% if request.path == '/about' %}active{% endif %}"
+                >
+                    About
+                </a>
+
+                <a
+                    href="/"
+                    class="{% if request.path == '/' %}active{% endif %}"
+                >
+                    Videos
+                </a>
+
+                <a
+                    href="/articles"
+                    class="{% if request.path.startswith('/articles') %}active{% endif %}"
+                >
+                    Articles
+                </a>
+
+            </nav>
+
+        </div>
+
+    </div>
+
+    <div class="header-right">
+
+        <div class="links">
+
+            <a
+                href="https://www.youtube.com/@AdeelAutomates"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="YouTube"
+            >
+                <i class="fab fa-youtube"></i>
+            </a>
+
+            <a
+                href="https://github.com/AdeelAutomates"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="GitHub"
+            >
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/anwr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+            >
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a
+                href="https://www.reddit.com/user/AdeelAutomates/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Reddit"
+            >
+                <i class="fab fa-reddit"></i>
+            </a>
+
+            <a
+                href="https://buymeacoffee.com/adeelautomates"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Buy Me a Coffee"
+            >
+                <i class="fas fa-mug-hot"></i>
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+</body>
+</html>

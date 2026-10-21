@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}
+Articles | Adeel Automates
+{% endblock %}
+
+{% block content %}
+
+<section class="articles-page">
+    <div class="article-list">
+
+        {% if article_posts %}
+
+            {% for post in article_posts %}
+
+                <a
+                    class="article-list-item"
+                    href="{{ url_for(
+                        'article_article',
+                        slug=post.slug
+                    ) }}"
+                >
+
+                    <div class="article-list-meta">
+
+                        <span class="article-date">
+                            {{ post.date }}
+                        </span>
+
+                        
+                        <span class="article-category">
+                            {{ post.category }}
+                        </span>
+                        
+
+                    </div>
+
+                    <span class="article-list-title">
+                        {{ post.title }}
+                    </span>
+
+                    <span class="article-arrow">
+                        <i class="fas fa-arrow-right"></i>
+                    </span>
+
+                </a>
+
+            {% endfor %}
+
+        {% else %}
+
+            <p class="no-articles">
+                No article posts have been published yet.
+            </p>
+
+        {% endif %}
+
+    </div>
+
+</section>
+
+{% endblock %}

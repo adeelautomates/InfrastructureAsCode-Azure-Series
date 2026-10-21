@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}
+Videos | Adeel Automates
+{% endblock %}
+
+{% block content %}
+
+<p class="home-intro">
+    Hands-on cloud engineering tutorials to build practical skills for the real world.
+</p>
+
+<div class="keyword-list">
+
+    {% for keyword in keywords %}
+
+        <span class="keyword">
+            {{ keyword }}
+        </span>
+
+    {% endfor %}
+
+</div>
+
+<div class="video-sections">
+
+    {% for section in video_sections %}
+
+        <section class="video-section">
+
+            <div class="video-section-header">
+
+                <h2>
+                    {{ section.title }}
+                </h2>
+
+            </div>
+
+            <div class="video-row">
+
+                {% for id in section.videos %}
+
+                    <a
+                        class="video"
+                        href="https://www.youtube.com/watch?v={{ id }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <img
+                            loading="lazy"
+                            src="https://img.youtube.com/vi/{{ id }}/maxresdefault.jpg"
+                            alt="{{ section.title }} video thumbnail"
+                        >
+                    </a>
+
+                {% endfor %}
+
+            </div>
+
+        </section>
+
+    {% endfor %}
+
+</div>
+
+{% endblock %}
