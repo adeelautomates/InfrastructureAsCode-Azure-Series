@@ -17,7 +17,7 @@ You will need to plug in your own values for it to work in your environment.
 | **001** | <a href="https://www.youtube.com/watch?v=KWpIzjHyC68"><img src="https://img.youtube.com/vi/KWpIzjHyC68/mqdefault.jpg" width="200" /></a> | **[Learn Terraform on Azure — Beginner Course](https://www.youtube.com/watch?v=KWpIzjHyC68)** <br>Understand Terraform (learn the foundations and core concepts that make Terraform work) |
 | **002** | <a href="https://www.youtube.com/watch?v=QwXqLAvmKac"><img src="https://img.youtube.com/vi/QwXqLAvmKac/mqdefault.jpg" width="200" /></a> | **[Learn Terraform on Azure — Intermediate Course](https://www.youtube.com/watch?v=QwXqLAvmKac)** <br>Program Terraform (use loops, functions, conditionals, dynamic blocks, etc) |
 | **003** | <a href="https://www.youtube.com/watch?v=SDqb_eyRtjE"><img src="https://img.youtube.com/vi/SDqb_eyRtjE/mqdefault.jpg" width="200" /></a> | **[Learn Terraform on Azure — Advanced Course](https://www.youtube.com/watch?v=SDqb_eyRtjE)** <br>Structure Terraform (introduce modules, remote state in azure storage, workspaces, imports, etc.) |
-
+| **004** | <a href="https://www.youtube.com/watch?v=Ui5ozyOkIeY"><img src="https://img.youtube.com/vi/Ui5ozyOkIeY/mqdefault.jpg" width="200" /></a> | **[Azure Project: Deploy an Application End-to-End using Terraform](https://www.youtube.com/watch?v=Ui5ozyOkIeY)** <br>Build Azure Project (Less about Terraform itself & more about building interesting architectures in Azure) |
 
 ### Support The Channel
 I believe good technical education should be accessible.
